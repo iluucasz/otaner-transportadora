@@ -10,11 +10,13 @@ import {
   PHONE_DISPLAY,
   PHONE_TEL,
 } from "@/lib/contact-info"
+import { SiteTraffic } from "@/components/site-traffic"
 
 const navLinks = [
   { href: "#inicio", label: "Início" },
   { href: "#sobre", label: "Sobre" },
   { href: "#servicos", label: "Serviços" },
+  { href: "#passageiros", label: "Passageiros" },
   { href: "#contato", label: "Contato" },
 ]
 
@@ -117,10 +119,11 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-primary-foreground/20 mt-10 pt-6 text-center">
+        <div className="mt-10 flex flex-col gap-3 border-t border-primary-foreground/20 pt-6 text-center md:flex-row md:items-center md:justify-between md:text-left">
           <p className="text-primary-foreground/60 text-sm">
             © {currentYear} Otaner Transportes. Todos os direitos reservados.
           </p>
+          <SiteTraffic />
         </div>
       </div>
     </footer>
