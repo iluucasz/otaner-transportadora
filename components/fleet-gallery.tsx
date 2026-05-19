@@ -29,7 +29,7 @@ const galleryItems = [
   },
   {
     src: "/van/91037e82-c1c5-4a4e-a76c-1cc06d528009.jpeg",
-    alt: "Interior espaçoso da van com bancos para passageiros",
+    alt: "Interior espaçoso da van",
     title: "Interior confortável",
     category: "Van",
   },
@@ -44,13 +44,7 @@ const galleryItems = [
     alt: "Van branca de carga estacionada em área aberta",
     title: "Entrega dedicada",
     category: "Van",
-  },
-  {
-    src: "/van/f8a12d83-f713-4af5-b00b-5f7c951a2280 (1).jpeg",
-    alt: "Veículo da frota para entregas urbanas",
-    title: "Frota em circulação",
-    category: "Van",
-  },
+  }
 ]
 
 export function FleetGallery() {
