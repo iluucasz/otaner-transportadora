@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <head>
-        {/* Google tag (gtag.js) - Google Analytics + Google Ads */}
+        {/* Google tag (gtag.js) - Google Analytics + Google Ads — DESATIVADO. Descomente para reativar.
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CRR55377M"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -45,6 +45,7 @@ export default function RootLayout({
             `,
           }}
         />
+        */}
       </head>
       <body className="font-sans antialiased bg-background">
         {children}
