@@ -31,6 +31,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+      <head>
+        {/* Google tag (gtag.js) - Google Analytics + Google Ads */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CRR55377M"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-0CRR55377M');
+              gtag('config', 'AW-18460740876');
+            `,
+          }}
+        />
+      </head>
       <body className="font-sans antialiased bg-background">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
