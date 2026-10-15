@@ -2,8 +2,6 @@ import type { Metadata } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
-import { MaintenanceOverlay } from '@/components/maintenance-overlay'
-import { MAINTENANCE_MODE } from '@/lib/site-config'
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -49,8 +47,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased bg-background">
-        {/* Em manutenção, o site não é renderizado: só o aviso aparece */}
-        {MAINTENANCE_MODE ? <MaintenanceOverlay /> : children}
+        {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
